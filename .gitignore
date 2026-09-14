@@ -1,0 +1,17 @@
+data/
+output/
+logs/
+replay_buffers/
+.cache/
+*.log
+*.download
+*.zip
+checkpoint-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.DS_Store
+wandb/
