@@ -1,7 +1,3 @@
-# LAPS
-
-LAPS is a continual fine-tuning framework for language models. It separates a shared slow model from a fast, preference-conditioned Bézier simplex of soft prompts. Task vertices acquire task-specific behavior, historical vertices are transported after slow-model updates, and interior controls are optimized with smooth Tchebycheff scalarization. A final Bayesian search selects one simplex preference per evaluation task.
-
 ## Method
 
 At continual stage `t`, LAPS performs four steps:
