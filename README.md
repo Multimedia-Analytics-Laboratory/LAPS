@@ -24,13 +24,24 @@ Learning an Anchored Prompt Space for Continual Adaptation of Large Language Mod
 
 ---
 Official implementation of **"Learning an Anchored Prompt Space for Continual Adaptation of Large Language Models."**
+
+## Overview
+
+<p align="center">
+  <img src="./overview.png" width="90%">
+</p>
+
+<p align="center">
+  <em>Overview of our Learning an Anchored Prompt Space (LAPS) framework.</em>
+</p>
+
 ## Method
 
 At continual stage `t`, LAPS performs four steps:
 
 1. Learn the current task vertex, then update the backbone with SFT.
 2. Recalibrate the current vertex and transport historical vertices with token-level forward KL from the preceding-stage model.
-3. Freeze the backbone and all vertices, then train non-vertex Bézier controls with STCH.
+3. Freeze the backbone and all vertices, then train non-vertex control prompts with STCH.
 4. After the final task, run expected-improvement search over the simplex and rerank the top candidates with repeated evaluation.
 
 ## Setup
