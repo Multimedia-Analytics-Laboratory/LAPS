@@ -1,13 +1,37 @@
+<h1 align="center">
+Learning an Anchored Prompt Space for Continual Adaptation of Large Language Models
+</h1>
+
+<p align="center">
+  <b>
+    Rongguang Ye<sup>1,2</sup>,
+    Zhan Zhuang<sup>1</sup>,
+    Yichen Wu<sup>3</sup>,
+    Ming Tang<sup>2</sup>,
+    Kede Ma<sup>1</sup>
+  </b>
+</p>
+
+<p align="center">
+  <sup>1</sup>City University of Hong Kong
+  &nbsp;&nbsp;
+  <sup>2</sup>Southern University of Science and Technology
+  &nbsp;&nbsp;
+  <sup>3</sup>Harvard University
+</p>
+
+
+
+---
+Official implementation of **"Learning an Anchored Prompt Space for Continual Adaptation of Large Language Models."**
 ## Method
 
 At continual stage `t`, LAPS performs four steps:
 
-1. Learn the current task vertex, then update the slow model with completion-only SFT.
+1. Learn the current task vertex, then update the backbone with SFT.
 2. Recalibrate the current vertex and transport historical vertices with token-level forward KL from the preceding-stage model.
-3. Freeze the slow model and all vertices, then train non-vertex Bézier controls with STCH.
-4. After the final task, run noisy expected-improvement search over the simplex and rerank the top candidates with repeated evaluation.
-
-The default configuration uses a degree-3 simplex, 30 soft-prompt tokens, `rebase_lr=0.01`, global batch size 128, and eight GPUs.
+3. Freeze the backbone and all vertices, then train non-vertex Bézier controls with STCH.
+4. After the final task, run expected-improvement search over the simplex and rerank the top candidates with repeated evaluation.
 
 ## Setup
 
