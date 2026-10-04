@@ -88,7 +88,16 @@ experiments/train_trace_simplex_stch_stage.py
 experiments/search_trace_simplex_bo_ei_vllm.py
 src/simplex_bezier_prompt.py                Bézier simplex parameterization
 ```
-
 ## Citation
 
-A citation will be added after publication.
+If you find our work useful, please consider citing:
+
+```bibtex
+@misc{ye2026laps,
+  title        = {Learning an Anchored Prompt Space for Continual Adaptation of Large Language Models},
+  author       = {Rongguang Ye and Zhan Zhuang and Yichen Wu and Ming Tang and Kede Ma},
+  year         = {2026},
+  eprint       = {2609.32499},
+  archivePrefix = {arXiv}
+}
+```
